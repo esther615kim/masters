@@ -7,6 +7,10 @@
 
 작업한 내용에 대한 자세한 설명을 적어주세요
 
+#### 2021.10.10
+[suzzie]
+- Move some components from App.js => Home.js
+- add 
 
 ### 🔗 레퍼런스
 

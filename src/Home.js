@@ -33,6 +33,18 @@ function Home() {
             <Hidden />
             <Magazine />
             <LocalMaster />
+
+            {/* footer에 붙어 있어서 가져옴 => 컴포넌트화 필요 */}
+            {/* <div className={classes.join}>
+        <p className={classes.more}><strong>더 많은 고객을 만날 기회!</strong><br />
+          가입 직후 <strong>내 조건에 맞는 요청서</strong>를<br />
+          무료로 받아보고 만나고 싶은<br />
+          고객과 연락해보세요.</p>
+        <Button variant="contained" size="medium" color="secondary" className={classes.margin_1}>
+          마스터로 가입하기
+        </Button>
+      </div> */}
+
         </div>
     )
 }

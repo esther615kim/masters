@@ -11,7 +11,7 @@ const FindCard = () => {
     <React.Fragment>
       <Container className={classes.boxContainer}>
         <h5 className={classes.sorting}>리뷰순</h5>
-        <h5 className={classes.title}>2,787명의 고수</h5>
+        <h5 className={classes.title}>2392명의 고수</h5>
 
         <Box className={classes.wrapper}>
           {/* 카드 */}

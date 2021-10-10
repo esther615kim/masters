@@ -26,7 +26,37 @@ const useStyles = makeStyles({
   },
   text: {
     paddingTop: 10
+  },
+  SearchBox: {
+    display: "flex",
+    flexDirection: "column",
+    padding: 80,
+    width: "100vw",
+    justifyContent: "center",
+    alignItems: "center",
+    background: "url('https://481xy61dp22v2uqbx85ez1tw-wpengine.netdna-ssl.com/wp-content/uploads/2016/02/No-Branding-Header-Background-1.jpg') cover"
+  },
+  SearchBtn: {
+    // background: "hsl(5, 83 %, 74 %)",
+    color: "#212121",
+    padding: 7,
+    marginLeft: 10,
+  },
+  mainTitle: {
+    fontWeight: "bold",
+    padding: 15,
+  },
+  stack: {
+    display: "flex",
+    justifyContent: "center",
+  },
+  stackBox: {
+    height: 5,
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center"
   }
+
 });
 
 export default useStyles;
