@@ -9,8 +9,8 @@ import PropTypes from 'prop-types';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
-const useStyles = makeStyles((theme)=>({
-    main: { 
+const useStyles = makeStyles((theme) => ({
+    main: {
         padding: '50px 0',
     },
     flex: {
@@ -30,7 +30,8 @@ const useStyles = makeStyles((theme)=>({
         margin: '30px 0',
     },
     infoBox: {
-        marginTop: '40px'
+        marginTop: '40px',
+        padding: theme.spacing(2),
     },
     flexBox: {
         display: 'flex',
@@ -40,16 +41,16 @@ const useStyles = makeStyles((theme)=>({
 }));
 
 function TabPanel(props) {
-    const { children, value, index, ...other }=props;
+    const { children, value, index, ...other } = props;
 
     return (
         <div
-        role="tabpanel" hidden={value!==index}
-        id={`simple-tabpannel-${index}`}
-        aria-labelledby={`simple-tab-${index}`}
-        {...other}>
-            {value===index && (
-                <Box sx={{p: 4}}>
+            role="tabpanel" hidden={value !== index}
+            id={`simple-tabpannel-${index}`}
+            aria-labelledby={`simple-tab-${index}`}
+            {...other}>
+            {value === index && (
+                <Box sx={{ p: 4 }}>
                     <Typography>{children}</Typography>
                 </Box>
             )}
@@ -57,7 +58,7 @@ function TabPanel(props) {
     );
 }
 
-TabPanel.propTypes={
+TabPanel.propTypes = {
     children: PropTypes.node,
     index: PropTypes.number.isRequired,
     value: PropTypes.string.isRequired,
@@ -70,12 +71,12 @@ function a11yProps(index) {
     };
 }
 
-export default function MasterProfile(){
+export default function MasterProfile() {
     const classes = useStyles();
 
     const [value, setValue] = React.useState(0);
 
-    const handleChange=(event, newValue)=>{
+    const handleChange = (event, newValue) => {
         setValue(newValue);
     };
 
@@ -85,17 +86,17 @@ export default function MasterProfile(){
                 <Box className={classes.img}>
                     <Card>
                         <CardMedia
-                        component="img"
-                        height="100"
-                        image="https://cdn.channel.io/plugin/images/unknown_user.jpg"
-                        alt="profile img"
+                            component="img"
+                            height="100"
+                            image="https://cdn.channel.io/plugin/images/unknown_user.jpg"
+                            alt="profile img"
                         />
                     </Card>
                 </Box>
                 <Box>
                     <Typography variant="h5" gutterBottom component="div">해방플러스 (해충으로부터 해방!)</Typography>
                     <Typography variant="caption" display="block" >바퀴벌레 퇴치</Typography>
-                    <Rating name="rating" precision={0.5} size="small" defaultValue={4.5}  />
+                    <Rating name="rating" precision={0.5} size="small" defaultValue={4.5} />
                 </Box>
             </Box>
 
@@ -142,13 +143,13 @@ export default function MasterProfile(){
 
 
                 <TabPanel value={value} index={1}>
-                사진/동영상
+                    사진/동영상
                 </TabPanel>
                 <TabPanel value={value} index={2}>
-                리뷰
+                    리뷰
                 </TabPanel>
                 <TabPanel value={value} index={3}>
-                질문답변
+                    질문답변
                 </TabPanel>
             </Box>
         </div>
