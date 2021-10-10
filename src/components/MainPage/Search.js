@@ -1,13 +1,18 @@
 import React from 'react';
 import CategoryCards from './Category/CategoryCards.js'
 import { alpha, makeStyles } from '@material-ui/core/styles';
-import { Button, Typography, InputBase } from '@material-ui/core';
+import { Box, Button, Typography, InputBase } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 
-const useStyles = makeStyles((theme)=>({
-    all: {
-        marginLeft: "20%",
+const useStyles = makeStyles((theme) => ({
+    boxContainer: {
+        marginLeft: "30%",
         marginRight: "30%",
+        position: "relative",
+        maxWidth: 1000,
+        height: 320,
+        padding: 30,
+        textAlign: "left"
     },
     findBtn: {
         fontWeight: "bold",
@@ -45,14 +50,14 @@ const useStyles = makeStyles((theme)=>({
         // vertical padding + font size from searchIcon
         paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
         transition: theme.transitions.create('width'),
-        
+
     },
 }));
 
-export default function Search(){
+export default function Search() {
     const classes = useStyles();
     return (
-        <div className={classes.all}>
+        <Box className={classes.boxContainer}>
             <div>
                 <Button className={classes.findBtn}>서비스 찾기</Button>
                 <Button className={classes.findBtn}>고객 찾기</Button>
@@ -62,20 +67,21 @@ export default function Search(){
             </Typography>
 
             {/* Search */}
-            <div className={classes.search}> 
+            <div className={classes.search}>
                 <div className={classes.searchIcon}>
                     <SearchIcon />
                 </div>
-            <InputBase
-                placeholder="서비스를 검색하세요"
-                classes={{
-                    root: classes.inputRoot,
-                    input: classes.inputInput,
-                }}
-                inputProps={{ 'aria-label': 'search' }}
-            />
+                <InputBase
+                    placeholder="서비스를 검색하세요"
+                    classes={{
+                        root: classes.inputRoot,
+                        input: classes.inputInput,
+                    }}
+                    inputProps={{ 'aria-label': 'search' }}
+                />
             </div>
             <CategoryCards />
-        </div>
+
+        </Box>
     );
 }
