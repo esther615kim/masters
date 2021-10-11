@@ -3,10 +3,10 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles({
   boxContainer: {
     margin: "0 auto",
-    maxWidth: 1000,
+
     height: 300,
     padding: 5,
-    textAlign: "left"
+    textAlign: "left",
   },
 
   card: {
@@ -27,14 +27,14 @@ const useStyles = makeStyles({
   text: {
     paddingTop: 10
   },
-  SearchBox: {
+  topSearchBox: {
     display: "flex",
     flexDirection: "column",
     padding: 80,
-    width: "100vw",
     justifyContent: "center",
     alignItems: "center",
-    background: "url('https://481xy61dp22v2uqbx85ez1tw-wpengine.netdna-ssl.com/wp-content/uploads/2016/02/No-Branding-Header-Background-1.jpg') cover"
+    width: "100vw",
+    background: "url('https://dmmj3ljielax6.cloudfront.net/upload/requestForm/26a5e44f-64cd-41a9-aba0-c2717d139795.png')",
   },
   SearchBtn: {
     // background: "hsl(5, 83 %, 74 %)",
@@ -50,13 +50,34 @@ const useStyles = makeStyles({
     display: "flex",
     justifyContent: "center",
   },
+  textBox: {
+    display: "flex",
+    marginTop: 20,
+    flexDirection: "column",
+    padding: 80,
+    justifyContent: "center",
+    alignItems: "center"
+  },
   stackBox: {
     height: 5,
     display: "flex",
     flexDirection: "column",
     alignItems: "center"
+  },
+  serviceCardBox: {
+    display: "flex",
+    Width: "100 %",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  serviceList: {
+    display: "flex",
+    flexDirection: "column",
+    flexWrap: "wrap",
+    // justifyContent: "center",
+    alignItems: "flex-start"
   }
-
 });
 
 export default useStyles;
