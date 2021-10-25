@@ -2,30 +2,27 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
   boxContainer: {
-    margin: "0 auto",
-
-    height: 300,
-    padding: 5,
-    textAlign: "left",
   },
-
   card: {
     maxWidth: 320,
-    height: 220,
-    margin: 3,
-    marginRight: 10
+    textAlign: "left",
+    height: 230,
+    margin: 5,
+    border: "none",
+    // boxShadow: "none"
   },
   media: {
     height: 38,
     paddingTop: "50%" //16:9 비율이래
   },
+  userNumber: {
+    display: "flex",
+    alignItems: "center",
+  },
   title: {
     marginLeft: 45,
-    marginBottom: 5,
+    fontWeight: 700,
     textAlign: "left"
-  },
-  text: {
-    paddingTop: 10
   },
   topSearchBox: {
     display: "flex",

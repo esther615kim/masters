@@ -15,11 +15,17 @@ const Magazine = () => {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <Box className={classes.boxContainer}>
-        <h3 className={classes.title}>매거진</h3>
-        <p className={classes.title}>마스터즈를 100% 활용하는 팁</p>
+      <Box sx={{ mt: 5 }}>
+        <Typography
+          align="left"
+          className={classes.title}
+          variant="h5">
+          Magazine</Typography>
+        <Typography align="left"
+          className={classes.title}
+          variant="subtitle1">How to use Masters 100%</Typography>
         <Container className={classes.wrapper}>
-          <Slider autoSlide={false} showDots={false} cardsToShow={3}>
+          <Slider cardsToShow={3}>
             {magazine.map((item, i) => {
               return (
                 <Card key={i} className={classes.card}>
@@ -34,7 +40,7 @@ const Magazine = () => {
           </Slider>
         </Container>
       </Box>
-    </React.Fragment>
+    </React.Fragment >
   );
 };
 

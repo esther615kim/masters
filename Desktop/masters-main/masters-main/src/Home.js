@@ -3,37 +3,31 @@ import React from 'react'
 //NR
 import Search from './components/MainPage/Search.js';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import LocalMaster from './components/MainPage/LocalMaster.js';
+
 import FindMaster from './components/FindMasterPage/SearchCategory.js';
-
-//SuZzie
-import Popular from "./components/cards/Popular";
-import Magazine from "./components/cards/Magazine";
-// import Tips from "./components/cards/Tips";
-import Hidden from "./components/cards/Hidden";
-
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+//Suzzie
+import Cards from './components/cards/Cards'
 //효효
 import RequestForm from "./components/RequestForm";
 import Review from "./components/Review";
 import Service from "./components/Service";
+import LocalMasters from './components/MainPage/LocalMaster';
 
 
 function Home() {
   return (
     <div>
-
       <Switch>
         <Route path='/findmaster' component={FindMaster} />
-        {/* <div style={{ paddingTop: '190px', paddingLeft: '123px', minHeight: 'calc(100vh - 80px)' }}> */}
+        <Route path='/login' component={Login} />
+        <Route path='/signup' component={Signup} />
         <Search />
-        {/* </div> */}
       </Switch>
-      {/* cards */}
-      <Popular />
-      <Hidden />
-      <Magazine />
-      <LocalMaster />
 
+      <Cards />
+      <LocalMasters />
       {/* footer에 붙어 있어서 가져옴 => 컴포넌트화 필요 */}
       {/* <div className={classes.join}>
         <p className={classes.more}><strong>더 많은 고객을 만날 기회!</strong><br />
@@ -44,7 +38,6 @@ function Home() {
           마스터로 가입하기
         </Button>
       </div> */}
-
     </div>
   )
 }

@@ -13,26 +13,37 @@ import {
   Typography
 } from "@material-ui/core";
 import "@fontsource/roboto";
+import PersonIcon from '@material-ui/icons/Person';
 
 const Cards = () => {
   const classes = useStyles();
   return (
     <React.Fragment>
       <Box className={classes.boxContainer}>
-        <h3 className={classes.title}>마스터즈 인기 서비스</h3>
+        <Typography gutterButtom
+          align="left"
+          className={classes.title}
+          variant="h5">
+          Popular Services</Typography>
         <Container className={classes.wrapper}>
           <Slider showDots={false} cardsToShow={3}>
             {popular.map((item, i) => {
               return (
                 <Card key={i} className={classes.card}>
-                  <CardMedia className={classes.media} image={item.url} />
-
-                  <CardContent className={classes.text}>
-                    <Typography variant="s">{item.title}</Typography>
+                  <CardMedia
+                    className={classes.media} image={item.url} />
+                  <CardContent >
+                    <Typography variant="button">{item.title}</Typography>
+                    <div className={classes.userNumber}>
+                      <Typography gutterButtom variant="caption">
+                        <PersonIcon style={{ paddingTop: 5, fontSize: 16, color: "#F79489" }} />
+                        {item.active_masters}&nbsp;masters</Typography>
+                    </div>
                   </CardContent>
                 </Card>
               );
             })}
+
           </Slider>
         </Container>
       </Box>

@@ -45,7 +45,7 @@ export default function Header() {
                     <div>
                         <Button size="medium" variant="contained" className={classes.masterbtn}>Master Signup</Button>
                         <ButtonGroup size="medium" variant="text">
-                            <Link className={classes.link}>
+                            <Link to="/signup" className={classes.link}>
                                 <Button>Sign Up</Button>
                             </Link>
                             <Link to="/findmaster" className={classes.link}>
