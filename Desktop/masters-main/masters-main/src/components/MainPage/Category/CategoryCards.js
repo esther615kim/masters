@@ -27,7 +27,11 @@ const useStyles = makeStyles((theme) => ({
     },
     card: {
         width: 120,
-        margin: 5
+        margin: 5,
+        transition: "transform 0.1s ease-in-out",//hover
+        '&:hover': { //hover
+            transform: "scale(1.05)"
+        }
     },
     cardBox: {
         width: 540,

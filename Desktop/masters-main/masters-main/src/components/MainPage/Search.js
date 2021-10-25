@@ -24,10 +24,10 @@ const useStyles = makeStyles((theme) => ({
         background: "#fff",
         borderRadius: 5,
         width: 200,
-        height: 40,
+        height: 45,
         display: "flex",
         alignItems: "center",
-        paddingLeft: 10
+        paddingLeft: 10,
     },
 }));
 
