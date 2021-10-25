@@ -1,73 +1,59 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography } from '@material-ui/core';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
+import { Grid, Container, Paper } from '@material-ui/core';
+const REGION = ["Seoul", "Gyeonggido", "Incheon", "Dajeon", "Busan", "Gwangju", "Dagu", "Chungcheong-do", "Jeolla-do", "Gyeongsang-do", "GangWon-do", "Jeju"]
 
-const useStyles = makeStyles((theme)=>({
-    root: { 
-        padding: theme.spacing(3),
-        background: '#ffe9de',
-        marginRight: theme.spacing(13),
-        marginTop: '100px',
-        marginLeft: "26%",
-        marginRight: "26%",
-        width: "1100",
-    },
-    title: { 
+const useStyles = makeStyles((theme) => ({
+    title: {
+        marginTop: 50,
         fontWeight: "bold",
     },
-    text: {
-        flexGrow: 1,
-        padding: '15px 0',
-    },
     paper: {
-        padding: theme.spacing(1),
+        padding: theme.spacing(2),
         textAlign: 'center',
-        color: theme.palette.text.primary,
+        '&:hover': {
+            background: 'linear-gradient(45deg, #F79489 30%, #FF8E53 90%)'
+        }
     },
 }));
 
-export default function LocalMaster(){
+export default function LocalMaster() {
     const classes = useStyles();
 
-    function FormRow(){
+    function FormRow() {
         return (
             <React.Fragment>
                 <Grid item xs={4}>
-                    <Paper className={classes.paper}>서울</Paper>
-                </Grid>
-                <Grid item xs={4}>
-                    <Paper className={classes.paper}>경기</Paper>
-                </Grid>
-                <Grid item xs={4}>
-                    <Paper className={classes.paper}>인천</Paper>
+                    <Paper className={classes.paper}>Seoul</Paper>
                 </Grid>
             </React.Fragment>
         );
     }
     return (
-        <div className={classes.root}>
-            <Typography variant="h6" className={classes.title}>전국 지역별 마스터즈</Typography>
-            <Typography className={classes.text}>
-                믿을 수 있는 전문가를 더 마스터, 단 한 곳에서 찾으세요.
+        <Container>
+            <Typography variant="h5" className={classes.title}>Masters by Region</Typography>
+            <Typography gutterBottom variant="h6">
+                Find trusted regional expert services here.
             </Typography>
 
-            <Grid container spacing={1}>
+            <Grid container spacing={1} >
+                {REGION.map((item, i) => {
+                    return (
+                        <Grid item key={i} xs={4}>
+                            <Paper className={classes.paper} elevation={1} >
+                                <Typography gutterBottom variant="button">
+                                    {item}
+                                </Typography>
+                            </Paper>
+                        </Grid>
+                    )
+                })}
+                {/* 
                 <Grid container item xs={12} spacing={1}>
                     <FormRow />
-                    <FormRow />
-                    <FormRow />
-                    <FormRow />
-                </Grid>
-                <Grid container item xs={12} spacing={1}>
-                    <FormRow />
-
-                </Grid>
-                <Grid container item xs={12} spacing={1}>
-                    <FormRow />
-                </Grid>
+                </Grid> */}
             </Grid>
-        </div>
+        </Container>
     );
 }

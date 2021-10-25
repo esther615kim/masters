@@ -22,9 +22,9 @@ function Copyright() {
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    marginTop: 80,
     display: 'flex',
     flexDirection: 'column',
-    minHeight: '100vh',
   },
   join: {
     marginTop: '5%',

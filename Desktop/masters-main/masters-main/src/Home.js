@@ -25,9 +25,8 @@ function Home() {
         <Route path='/signup' component={Signup} />
         <Search />
       </Switch>
-
       <Cards />
-      <LocalMasters />
+
       {/* footer에 붙어 있어서 가져옴 => 컴포넌트화 필요 */}
       {/* <div className={classes.join}>
         <p className={classes.more}><strong>더 많은 고객을 만날 기회!</strong><br />

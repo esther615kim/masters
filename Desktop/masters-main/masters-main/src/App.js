@@ -8,15 +8,11 @@ import Footer from "./components/Footer";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 
-
 function App() {
   return (
     <Suspense fallback={(<div>~Loading~</div>)}>
       <Header />
       <Home />
-      {/* <FindService /> */}
-      {/* <Login /> */}
-      {/* <Signup /> */}
       <Footer />
     </Suspense>
 

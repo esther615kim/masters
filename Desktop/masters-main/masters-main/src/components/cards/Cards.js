@@ -3,9 +3,11 @@ import React from 'react'
 import Popular from './Popular';
 import Hidden from './Hidden';
 import Magazine from './Magazine';
+import LocalMasters from '../MainPage/LocalMaster';
 import Safe from './Safe';
 import { styled } from '@mui/system';
 import { Grid, Container, Typography } from '@mui/material';
+import LockIcon from '@mui/icons-material/Lock';
 
 function Cards() {
     return (
@@ -25,6 +27,9 @@ function Cards() {
 
                     <Grid item xs={12}>
                         <Magazine />
+                    </Grid>
+                    <Grid item xs={12}>
+                        <LocalMasters />
                     </Grid>
                 </Wrapper>
             </Container>
