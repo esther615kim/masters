@@ -20,12 +20,12 @@ function Home() {
   return (
     <div>
       <Switch>
-        <Route path='/findmaster' component={FindMaster} />
-        <Route path='/login' component={Login} />
-        <Route path='/signup' component={Signup} />
+        <Route exact path='/findmaster' mcomponent={FindMaster} />
+        <Route exact path='/login' component={Login} />
+        <Route exact path='/signup' component={Signup} />
         <Search />
       </Switch>
-      <Cards />
+      {/* <Cards /> */}
 
       {/* footer에 붙어 있어서 가져옴 => 컴포넌트화 필요 */}
       {/* <div className={classes.join}>

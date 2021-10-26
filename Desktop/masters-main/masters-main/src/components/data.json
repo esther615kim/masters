@@ -72,6 +72,7 @@
         "hired": 15
       }
     ],
+
     "tips": [
       {
         "imageUri": "https://static.cdn.soomgo.com/upload/talkboard/01c04d0b-43ae-48b7-8282-31803a1b2c1d.jpeg",
@@ -94,9 +95,10 @@
         "master": "손은정의 똑딱정리"
       }
     ],
+
     "magazine": [
       {
-        "imageUri": "https://dmmj3ljielax6.cloudfront.net/upload/home/magazine/GettyImages-1291937154.jpg",
+        "imageUri":"https://dmmj3ljielax6.cloudfront.net/upload/home/magazine/GettyImages-1291937154.jpg",
         "title": "How to arrange the drawers"
       },
       {
@@ -118,16 +120,7 @@
       {
         "imageUri": "https://dmmj3ljielax6.cloudfront.net/upload/home/magazine/Screen_Shot_2021-09-01_at_6.04.28_PM.png",
         "title": "Old bathrooom remodeling"
-      }
-    ],
-    "find_masters": [
-      {
-        "imageUri": "https://static.cdn.soomgo.com/upload/profile/206d790b-69ea-4f5c-9621-0efae5e494bc.jpg?d=320x320",
-        "name": "Ji Yong Deok",
-        "description": "Master Ji's A.C cleaning service",
-        "score": 5.0,
-        "hired": 140
       }
     ]
+
   }
-  

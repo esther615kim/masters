@@ -40,7 +40,42 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const CATEGORY = ["Lesson", "Home", "Event", "Business", "Design", "Beauty", "Temp jobs", "Others"];
+const CATEGORY = [
+    {
+        icon: <HomeOutlinedIcon color="action" fontSize="large" />,
+        display: "Home"
+    },
+    {
+        icon: <MenuBookOutlinedIcon color="action" fontSize="large" />,
+        display: "Lesson"
+    },
+    {
+        icon: <CheckBoxOutlineBlankOutlinedIcon color="action" fontSize="large" />,
+        display: "Event"
+    },
+    {
+        icon: <SupervisorAccountOutlinedIcon color="action" fontSize="large" />,
+        display: "Business"
+    },
+    {
+        icon: <MenuBookOutlinedIcon color="action" fontSize="large" />,
+        display: "Beauty"
+    },
+    {
+        icon: <DesignServicesIcon color="action" fontSize="large" />,
+        display: "Design"
+    },
+
+    {
+        icon: <LocalHospitalOutlinedIcon color="action" fontSize="large" />,
+        display: "Temp jobs"
+    },
+    {
+        icon: <CheckBoxOutlineBlankOutlinedIcon color="action" fontSize="large" />,
+        display: "Others"
+    },
+];
+
 export default function CategoryCards() {
     const classes = useStyles();
 
@@ -54,11 +89,11 @@ export default function CategoryCards() {
                             <Card key={i} className={classes.card}>
                                 <CardActionArea>
                                     <Box textAlign="center" m={1}>
-                                        <SupervisorAccountOutlinedIcon color="action" fontSize="large" />
+                                        {item.icon}
                                     </Box>
                                 </CardActionArea>
                                 <CardContent>
-                                    <Typography variant="body1" component="div">{item}</Typography>
+                                    <Typography variant="body1" component="div">{item.display}</Typography>
                                 </CardContent>
                             </Card>
                         );
